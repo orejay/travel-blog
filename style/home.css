@@ -1,0 +1,277 @@
+@import 'header.css';
+@import 'sidebar.css';
+@import 'content.css';
+@import 'footer.css';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500&family=PT+Sans&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Montserrat:wght@400;500&family=PT+Sans&family=Tangerine:wght@700&display=swap');
+
+body {
+    font-size: 14px;
+    font-family: 'PT Sans', 'Lato', sans-serif;
+    line-height: 1.5em;
+    margin: 0%;
+    color: #555;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 250px 1fr;
+    grid-template-areas: 
+    "header"
+    "sidebar"
+    "content"
+    "footer"
+    ;
+}
+
+@media (min-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 35px 300px auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar sidebar"
+        "content content"
+        "footer footer"
+        ;
+    }
+
+    #sidebar a {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    #nav ul {
+        list-style: none;
+        font-family: inherit;
+        font-size: 1.3em;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-left: 0%;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #nav li {
+        margin-top: 20px;
+    }
+    
+
+    #content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 400px auto;
+        grid-template-areas: 
+        "top top"
+        "post post";
+        padding: 2%;
+        background-color: ivory;
+    }
+
+    .post-img {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 5px;
+        margin-left: 5%;
+    }
+
+    .post-caption {
+        font-family: 'Abril Fatface', cursive;
+        text-align: start;
+        margin: 1px 0 0 10%;
+        font-size: 1.5em;
+        color: #26aae1;
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 55%;
+        margin-left: 10%;
+        color: #aaa;
+    }
+
+    .fa-comments {
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+    
+    .fa-circle {
+        font-size: 4px;
+        margin-top: 9px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #container {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 35px auto auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "sidebar content"
+        "sidebar footer"
+        ;
+    }
+
+    #sm-icons {
+        width: 20%;
+
+    }
+
+    #travel {
+        display: inline-block;
+        margin-left: -56.2%;
+        font-size: 1.1em;
+        color: #777;
+    }
+
+    #sidebar {
+        border-right: 1px solid #eee;
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 0%;
+    }
+
+    #logo {
+        margin-top: 20px;
+    }
+
+    #nav {
+        margin-top: 20px;
+    }
+
+    #nav ul {
+        list-style: none;
+        font-family: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    #nav li {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    #nav li:hover {
+        color: #26aae1;
+    }
+
+    #content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 578px auto;
+        grid-template-areas: 
+        "top top"
+        "post post";
+        padding: 2%;
+        background-color: ivory;
+    }
+
+    #top-image {
+        grid-area: top;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        border-radius: 5px;
+        background-image: url('photos/maldives.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 0 5% 5% 5%;
+        font-size: 4em;
+        line-height: 2em;
+        font-family: 'Abril Fatface', cursive;
+        color: ivory;
+        cursor: pointer;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-card {
+        width: 80%;
+        border-radius: 7px;
+    }
+
+    .post-img {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 5px;
+        margin: 0%;
+    }
+
+    .post-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-caption {
+        font-family: 'Abril Fatface', cursive;
+        text-align: start;
+        margin: 1px 0 0 5%;
+        font-size: 1.5em;
+        color: #26aae1;
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        margin-left: 5%;
+        color: #aaa;
+    }
+    
+    .fa-comments {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+    
+    .fa-circle {
+        font-size: 4px;
+        margin-top: 14px;
+    }
+    
+    .post p {
+        max-width: 90%;
+        line-height: 30px;
+    }
+
+    .post-card:hover {
+        box-shadow: 0 5px 5px 0 #ddd;
+    }
+
+    #footer {
+        border-top: 1px solid #eee;
+    }
+}

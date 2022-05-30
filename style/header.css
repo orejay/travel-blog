@@ -1,0 +1,46 @@
+#header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#sm-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sm-icons i {
+    font-size: 1em;
+    color: #777;
+    margin-left: 10px;
+}
+
+#travel {
+    display: none;
+}
+
+#search {
+    display: flex;
+}
+
+#search-bar:focus {
+    outline: 0;
+}
+
+#search input {
+    width: 60px;
+    height: 15px;
+    border: none;
+}
+
+#search i {
+    color: #777;
+}
+
+#search button {
+    border: none;
+    background-color: inherit;
+}

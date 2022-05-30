@@ -1,0 +1,11 @@
+
+#footer {
+    grid-area: footer;
+}
+
+#footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    color: #777;
+}

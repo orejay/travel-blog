@@ -1,0 +1,209 @@
+#content {
+    grid-area: content !important;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "content"
+    "comments"
+    "footer";
+    margin: 0%;
+}
+
+#about-location {
+    grid-area: content;
+}
+
+#location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#location h2 {
+    font-size: 1.8em;
+    font-family: 'Abril Fatface', cursive;
+    color: #26aae1;
+}
+
+#location img {
+    width: 90%;
+    height: auto;
+}
+
+#location-caption p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#writeup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#writeup p {
+    max-width: 90%;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 2em;
+}
+
+#about-header {
+    font-weight: 100;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px solid #eee;
+}
+
+#author {
+    display: flex;
+    margin-left: 5%;
+}
+
+#oreoluwa {
+    width: 40%;
+}
+
+#oreoluwa img {
+    width: 100%;
+    height: auto;
+}
+
+#oreoluwa figure {
+    margin: 0%;
+}
+
+#about-author {
+    margin-left: 5%;
+}
+
+#author-name {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.2em;
+    margin: 0%;
+}
+
+#about-author ul {
+    list-style: none;
+    padding-left: 0%;
+    margin-top: 0%;
+    font-size: 1.1em;
+}
+
+#about-author blockquote {
+    margin: 0%;
+    margin-top: 10px;
+    max-width: 90%;
+}
+
+#comments {
+    grid-area: comments;
+    display: flex;
+    flex-direction: column;
+}
+
+#comments textarea {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px;
+    width: 85%;
+    margin-left: 4%;
+    min-height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+#comments textarea:focus {
+    outline: 0;
+}
+
+#comment-button {
+    margin-top: 5px;
+    border: none;
+    font-family: inherit;
+    color: ivory;
+    background-color: #26aae1;
+    font-weight: bold;
+    height: 2em;
+    width: 6em;
+    margin-left: 70%;
+}
+
+#footer {
+    grid-area: footer;
+    margin: 0;
+}
+
+@media (min-width: 1024px) {
+    #content {
+        grid-area: content !important;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "content comments"
+        "footer footer";
+        margin: 0%;
+    }
+
+    #comments {
+        grid-area: comments;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-left: 1px solid #eee;
+        margin: -7% 0;
+    }
+
+    #location p {
+        font-size: 2.2em;
+        font-family: 'Abril Fatface', cursive;
+        color: #26aae1;
+    }
+    
+    #comments textarea {
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 10px;
+        width: 85%;
+        min-height: 120px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        margin-top: 20px;
+    }
+    
+    #comment-button {
+        margin-top: 5px;
+        border: none;
+        font-family: inherit;
+        color: ivory;
+        background-color: #26aae1;
+        font-weight: bold;
+        height: 2em;
+        width: 6em;
+        cursor: pointer;
+    }
+    
+    #comment-button:hover {
+        background-color: #26eea1;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    #comment-button {
+        margin-top: 5px;
+        border: none;
+        font-family: inherit;
+        color: ivory;
+        background-color: #26aae1;
+        font-weight: bold;
+        height: 2em;
+        width: 6em;
+        cursor: pointer;
+        margin-left: 81%;
+    }
+}
